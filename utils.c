@@ -1,0 +1,19 @@
+#include <string.h>
+#include <ctype.h>
+
+int suffix(char str[], char c)
+{
+	int length = strlen(str);
+	int count = 0, i,j;
+	for (i=1; i<length; i++)
+	{
+		if (str[i]==c)
+		{
+			for (j=i; j<length; j++)
+				printf("%c", str[j]);
+			printf("\n");
+			count++;
+		}
+	}
+	return count; 
+}
